@@ -23,7 +23,6 @@ const fn = getRandomInt(11); //first num
 
 const op = getRandomInt(3); //operator
 const sn = getRandomInt(11); //second num
-var count = 0;
 const operators = ["plus", "minus", "times", "divide"];
 
 var lang = document.documentElement.lang;
@@ -61,13 +60,14 @@ function play() {
 }
 
 function reveal() {
+    var count = 0;
+    var operatorCheck;
 
     var a = document.getElementById("firstNum").value;
     var b = document.getElementById("operator").value;
     var c = document.getElementById("secondNum").value;
     var d = document.getElementById("total").value;
 
-    var operatorCheck;
     console.log(b);
     if (b === "-" && operators[op] === "minus") operatorCheck = "-";
     else if (b === "+" && operators[op] === "plus") operatorCheck = "+";
