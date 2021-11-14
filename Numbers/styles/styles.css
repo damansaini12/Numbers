@@ -458,7 +458,10 @@ a {
 }
 .sidebar .nav-links::-webkit-scrollbar{
   display: none;
+  scrollbar-width: none;
+
 }
+
 .sidebar .nav-links li{
   position: relative;
   list-style: none;
@@ -602,7 +605,7 @@ a {
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
-  
+
 }
 .sidebar.close .profile-details i,
 .sidebar.close .profile-details .profile_name,
@@ -642,8 +645,21 @@ a {
   font-size: 26px;
   font-weight: 600;
 }
-@media (max-width: 420px) {
+/* @media (max-width: 420px) {
   .sidebar.close .nav-links li .sub-menu{
     display: none;
+  }
+} */
+
+@Media only screen and (max-width: 767px)
+{
+  .sidebar.close .nav-links li .sub-menu{
+    display: none;
+  }
+  .sidebar.close .nav-links{
+    display: none;
+  }
+  .sidebar {
+    position: inherit;
   }
 }
