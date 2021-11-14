@@ -19,16 +19,17 @@ const op = getRandomInt(3); //operator
 const sn = getRandomInt(11); //second num
 const operators = ["plus", "minus", "times", "divide"];
 
-var lang = document.documentElement.lang;
-console.log(lang);
-
-console.log(fn);
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
 function play() {
+
+var lang = document.documentElement.lang;
+console.log(lang);
+
+console.log(fn);
     const path = "audio/" + lang + "/" + fn + ".mp3";
     const audio = new Audio(path);
     //
