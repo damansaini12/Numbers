@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <title>Learn Numbers</title>
-  <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Learn Numbers</title>
+    <link rel="stylesheet" href="style.css">
 
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -19,362 +19,315 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="styles/general.css"> -->
     <!-- Boxiocns CDN Link -->
-       <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
     <title>Numbers</title>
     <script>
         const changeLang = (languageCode) => {
-         document.documentElement.setAttribute("lang", languageCode);
+            document.documentElement.setAttribute("lang", languageCode);
         };
-      </script>
+    </script>
 
-  <style>
+    <style>
 
-  </style>
+    </style>
 </head>
 <body>
-  <div class="sidebar close">
+<div class="sidebar close">
     <div class="logo-details">
-      <i class='bx bx-menu' ></i>
-      <div class="home-content">
-        <span class="text"></span>
-      </div>
-      <span class="logo_name">Learn Numbers</span>
+        <i class='bx bx-menu'></i>
+        <div class="home-content">
+            <span class="text"></span>
+        </div>
+        <span class="logo_name">Learn Numbers</span>
     </div>
     <ul class="nav-links">
 
-      <li >
-        <div class="iocn-link">
-          <a href="#">
-            <i> <img src="icons/arab.png" style="width: 25px;"></img></i>
-            <span class="link_name">Arabic</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Arabic</a></li>
-          <li><a href="#">0 - 100</a></li>
-          <li><a href="#">0 - 1000</a></li>
-          <li> <a href="#"><input type="text" id="firstValue" name="firstValue" value="0">-<input type="text" id="secondValue" name="secondValue" value="10000"></a>
-            <div id="btn-submit" >
-              <button class="btn-search" id="submit">Submit</button>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i> <img src="icons/arab.png" style="width: 25px;"></img></i>
+                    <span class="link_name">Arabic</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
             </div>
-          </li>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Arabic</a></li>
+                <li><a href="#">0 - 100</a></li>
+                <li><a href="#">0 - 1000</a></li>
+                <li><a href="#"><input type="text" id="firstValue" name="firstValue" value="0">-<input type="text"
+                                                                                                       id="secondValue"
+                                                                                                       name="secondValue"
+                                                                                                       value="10000"></a>
+                    <div id="btn-submit">
+                        <button class="btn-search" id="submit">Submit</button>
+                    </div>
+                </li>
 
-        </ul>
-      </li>
+            </ul>
+        </li>
 
 
-      <li>
-        <div class="iocn-link">
-          <a href="#">
+        <li>
+            <div class="iocn-link">
+                <a href="#">
 
-            <i onclick="changeLang('fr')"> <img src="icons/france.png" style="width: 25px;"></img></i>
-            <span class="link_name">French</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">French</a></li>
-          <li><a href="#">0 - 100</a></li>
-          <li><a href="#">0 - 1000</a></li>
-          <li><a href="#">All Numbers</a></li>
-        </ul>
-      </li>
+                    <i onclick="changeLang('fr')"> <img src="icons/france.png" style="width: 25px;"></img></i>
+                    <span class="link_name">French</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">French</a></li>
+                <li><a href="#">0 - 100</a></li>
+                <li><a href="#">0 - 1000</a></li>
+                <li><a href="#">All Numbers</a></li>
+            </ul>
+        </li>
 
-      <li>
-        <a href="#">
-          <i onclick="changeLang('de')"> <img src="icons/germany.png" style="width: 25px;"></img></i>
-          <span class="link_name" onclick="changeLanguage('de')">German</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">German</a></li>
-        </ul>
-      </li>
+        <li>
+            <a href="#">
+                <i onclick="changeLang('de')"> <img src="icons/germany.png" style="width: 25px;"></img></i>
+                <span class="link_name" onclick="changeLanguage('de')">German</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">German</a></li>
+            </ul>
+        </li>
 
-      <li>
-        <a href="#">
-          <i> <img src="icons/italy.png" style="width: 25px;"></img></i>
-          <span class="link_name">Italian</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Italian</a></li>
-        </ul>
-      </li>
+        <li>
+            <a href="#">
+                <i> <img src="icons/italy.png" style="width: 25px;"></img></i>
+                <span class="link_name">Italian</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Italian</a></li>
+            </ul>
+        </li>
 
-      <li>
-        <a href="#">
-          <i> <img src="icons/russia.png" style="width: 25px;"></img></i>
-          <span class="link_name">Russian</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Russian</a></li>
-        </ul>
-      </li>
+        <li>
+            <a href="#">
+                <i> <img src="icons/russia.png" style="width: 25px;"></img></i>
+                <span class="link_name">Russian</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Russian</a></li>
+            </ul>
+        </li>
 
-      <li>
-        <a href="#">
-          <i> <img src="icons/spain.png" style="width: 25px;"></img></i>
-          <span class="link_name">Spainish</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Spainish</a></li>
-        </ul>
-      </li>
+        <li>
+            <a href="#">
+                <i> <img src="icons/spain.png" style="width: 25px;"></img></i>
+                <span class="link_name">Spainish</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Spainish</a></li>
+            </ul>
+        </li>
 
-      <li>
-        <div class="iocn-link" style="">
-          <a href="#">
+        <li>
+            <div class="iocn-link" style="">
+                <a href="#">
 
-            <i> <img src="icons/uk.png" style="width: 25px;"></img></i>
-            <span class="link_name">Eng-UK</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Eng-UK</a></li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">PHP & MySQL</a></li>
-        </ul>
-      </li>
+                    <i> <img src="icons/uk.png" style="width: 25px;"></img></i>
+                    <span class="link_name">Eng-UK</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Eng-UK</a></li>
+                <li><a href="#">HTML & CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">PHP & MySQL</a></li>
+            </ul>
+        </li>
 
-      <li>
-        <a href="#">
-          <i> <img src="icons/us.png" style="width: 25px;"></img></i>
-          <span class="link_name">Eng-US</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Eng-US</a></li>
-        </ul>
-      </li>
+        <li>
+            <a href="#">
+                <i> <img src="icons/us.png" style="width: 25px;"></img></i>
+                <span class="link_name">Eng-US</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Eng-US</a></li>
+            </ul>
+        </li>
 
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-plug' ></i>
-            <span class="link_name">Plugins</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Plugins</a></li>
-          <li><a href="#">UI Face</a></li>
-          <li><a href="#">Pigments</a></li>
-          <li><a href="#">Box Icons</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-compass' ></i>
-          <span class="link_name">Explore</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Explore</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-history'></i>
-          <span class="link_name">History</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">History</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-cog' ></i>
-          <span class="link_name">Setting</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Setting</a></li>
-        </ul>
-      </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-plug'></i>
+                    <span class="link_name">Plugins</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Plugins</a></li>
+                <li><a href="#">UI Face</a></li>
+                <li><a href="#">Pigments</a></li>
+                <li><a href="#">Box Icons</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-compass'></i>
+                <span class="link_name">Explore</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Explore</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-history'></i>
+                <span class="link_name">History</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">History</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-cog'></i>
+                <span class="link_name">Setting</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Setting</a></li>
+            </ul>
+        </li>
 
-  </li>
-</ul>
-  </div>
+        </li>
+    </ul>
+</div>
 
-  <main>
+<main>
     <div class="container">
-      <div class="header">
-        <h1 class="title">Numbers</h1>
-        <div id="btn-mode" >
-          <p id="mode-text">LIGHT</p>
-          <div class="icon-container"><img id="mode-icon" src="./assets/icon-sun.svg" alt=""></div>
-        </div>
-      </div>
-
-      <div class="profile-container">
-
-
-        <div class="profile-stats-wrapper">
-
-          <div class="profile-stat">
-            <p class="stat-title">Easy</p>
-            <p id="repos"class="stat-value"></p>
-          </div>
-          <div class="profile-stat">
-            <p class="stat-title">Medium</p>
-            <p id="followers" class="stat-value"></p>
-          </div>
-          <div class="profile-stat">
-            <p class="stat-title">Hard</p>
-            <p id="following" class="stat-value"></p>
-          </div>
+        <div class="header">
+            <h1 class="title">Numbers</h1>
+            <div id="btn-mode">
+                <p id="mode-text">LIGHT</p>
+                <div class="icon-container"><img id="mode-icon" src="./assets/icon-sun.svg" alt=""></div>
+            </div>
         </div>
 
-        <div class="profile-content">
-<!-- width 493 x 517 mobile
-width 480 x 400 web  -->
-          <div class="empty"></div>
-          <div class="inputContainer">
-            <div class="blank">
-              <div class="card-body">
-                  <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''"
-                         value="Cleck here" required>
-             </div>
-            </div>
-            <div class="showAnswer">
+        <div class="profile-container">
 
-              <div class="profile-info">
-                <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div>
-                <button class="btn-search" id="submit">Show Answer</button>
-                <p id="answer">###</p>
 
-              </div>
+            <div class="profile-stats-wrapper">
 
-            </div>
-            <div class="checkAnswer">
-              <div class="profile-info">
-                <div class="bottom-icons"><img src="./assets/icon-website.svg" alt=""></div>
-                <button class="btn-search" id="submit">Check Answer</button>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="profile-header">
-              <div class="card-body">
-                  <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''"
-                         value="Cleck here" required>
-             </div>
-
-              <div class="profile-info-wrapper">
-                <div class="profile-name">
-                  <div class="card-body">
-                      <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''"
-                             value="Enter text here" required>
-                 </div>
+                <div class="profile-stat">
+                    <p class="stat-title">Easy</p>
+                    <p id="repos" class="stat-value"></p>
                 </div>
-              </div>
-
-              <!-- <div class="profile-info-wrapper">
-                <div class="profile-name">
-                  <div class="card-body">
-                      <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''"
-                             value="Enter text here" required>
-                 </div>
+                <div class="profile-stat">
+                    <p class="stat-title">Medium</p>
+                    <p id="followers" class="stat-value"></p>
                 </div>
-              </div>
-
-
-              <div class="profile-info-wrapper">
-                <div class="profile-name">
-                  <div class="card-body">
-                      <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''"
-                             value="Enter text here" required>
-                 </div>
+                <div class="profile-stat">
+                    <p class="stat-title">Hard</p>
+                    <p id="following" class="stat-value"></p>
                 </div>
-              </div> -->
-          </div>
-
-
-            <div class="profile-info">
-              <div class="bottom-icons"><img src="./assets/icon-website.svg" alt=""></div>
-              <button class="btn-search" id="submit">Check Answer</button>
-
             </div>
 
-            <div class="profile-info">
-              <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div>
-              <button class="btn-search" id="submit">Show Answer</button>
-              <p id="answer">###</p>
+            <div class="profile-content">
+                <!-- width 493 x 517 mobile
+                width 480 x 400 web  -->
+                <div class="empty"></div>
+                <div class="inputContainer">
+                    <div class="blank">
+                        <div class="card-body">
+                            <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''"
+                                   value="Click here" required>
+                        </div>
+                    </div>
+                    <div class="showAnswer">
 
+                        <div class="profile-info">
+                            <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div>
+                            <button class="btn-search" id="submit">Show Answer</button>
+                            <p id="answer">###</p>
+
+                        </div>
+
+                    </div>
+                    <div class="checkAnswer">
+                        <div class="profile-info">
+                            <div class="bottom-icons"><img src="./assets/icon-website.svg" alt=""></div>
+                            <button class="btn-search" id="submit">Check Answer</button>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-
-      </div>
 
         </div>
-      </div>
+    </div>
     </div>
 
-  </main>
-  <script src="script.js"></script>
+</main>
+<script src="script.js"></script>
 
 
-  <script>
-          var input = document.getElementById("firstNum");
-          input.addEventListener("keydown", function (e) {
-              if (e.key === "Enter") {
-                  reveal();
-              }
-          });
-          //
-          // var input2 = document.getElementById("operator");
-          // input2.addEventListener("keydown", function (e) {
-          //     if (e.key === "Enter") {
-          //         reveal();
-          //     }
-          // });
-          // var input3 = document.getElementById("secondNum");
-          // input3.addEventListener("keydown", function (e) {
-          //     if (e.key === "Enter") {
-          //         reveal();
-          //     }
-          // });
-          // var input4 = document.getElementById("total");
-          // input4.addEventListener("keydown", function (e) {
-          //     if (e.key === "Enter") {
-          //         reveal();
-          //     }
-          // });
+<script>
+    var input = document.getElementById("firstNum");
+    input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            reveal();
+        }
+    });
+    //
+    // var input2 = document.getElementById("operator");
+    // input2.addEventListener("keydown", function (e) {
+    //     if (e.key === "Enter") {
+    //         reveal();
+    //     }
+    // });
+    // var input3 = document.getElementById("secondNum");
+    // input3.addEventListener("keydown", function (e) {
+    //     if (e.key === "Enter") {
+    //         reveal();
+    //     }
+    // });
+    // var input4 = document.getElementById("total");
+    // input4.addEventListener("keydown", function (e) {
+    //     if (e.key === "Enter") {
+    //         reveal();
+    //     }
+    // });
 
 
-      </script>
+</script>
 
-  <script src="js/js.js"> </script>
+<script src="js/js.js"></script>
 
-  <script>
+<script>
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
-      arrow[i].addEventListener("click", (e)=>{
-     let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-     arrowParent.classList.toggle("showMenu");
-      });
+        arrow[i].addEventListener("click", (e) => {
+            let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+            arrowParent.classList.toggle("showMenu");
+        });
     }
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".bx-menu");
     console.log(sidebarBtn);
-    sidebarBtn.addEventListener("click", ()=>{
-      sidebar.classList.toggle("close");
+    sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
     });
-  </script>
+</script>
 
-  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 
-  <script>
+<script>
 
-    btnmode.addEventListener('click', function(){
-        if(darkMode == false){
+    btnmode.addEventListener('click', function () {
+        if (darkMode == false) {
             darkModeProperties()
-        }else{
+        } else {
             lightModeProperties()
         }
     })
 
-  </script>
+</script>
 
 
 </body>
