@@ -174,3 +174,8 @@ function resetInputColorCorrect(id) {
         window.location.reload(false);
 
 }
+
+function showAnswer() // no ';' here
+{
+    document.getElementById("answer").innerHTML = fn;
+}

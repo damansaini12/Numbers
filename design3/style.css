@@ -26,7 +26,7 @@ body{
 
 }
 .container{
-    max-width: 327px;
+    max-width: 400px;
     margin: auto;
 }
 .header{
@@ -109,16 +109,16 @@ body{
     box-shadow: var(--lm-shadow-inactive);
 }
 .profile-content{
-    width: 280px;
+    width: 100%;
     height: 481px;
     min-height: 517px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+    /* margin: auto; */
+    display: grid;
+    /* flex-direction: column; */
     justify-content: space-evenly;
 }
 .profile-header{
-    display: flex;
+    display: grid;
 
 }
 #avatar{
@@ -179,7 +179,7 @@ body{
     justify-content: space-between;
 }
 .profile-info{
-    display: flex;
+    padding: 15%;
 }
 .bottom-icons{
     width:20px;
@@ -223,7 +223,7 @@ body{
         margin-top: 24px;
     }
     .profile-content{
-        width: 493px;
+        width: 100%;
     }
     #avatar{
         width: 117px;
@@ -292,10 +292,22 @@ body{
         padding-top: 140px
     }
     .profile-content{
-        max-width: 480px;
-        margin-left: 200px;
+        max-width: 100%;
+        margin: auto;
         min-height: 400px;
         max-height: 400px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 1.8fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "empty empty empty"
+          "blank blank blank"
+          " .  .  . "
+          "showAnswer . checkAnswer";
+`
     }
     .profile-header{
         position: relative;
@@ -602,43 +614,57 @@ body{
 }
 
 /* Card Body */
+
+
 .card-body  input[type="text"]{
-  color: white;
-  font-size: inherit;
+  color: var(--lm-text);
+  font-size: 2.5em;
   font-weight: inherit;
   background-color: inherit;
-  border-color: white;
-  width: 100px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: var(--lm-text);
+  width: 25%;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-.inputContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . ."
-    "blank blank blank"
-    "showAnswer . checkAnswer";
+.blank {
+   grid-area: blank;
+   position: relative;
+  width: 100%;
+  top: 50%;
+  margin-top: -10px;
+  text-align: center;
+  }
+
+.showAnswer {
+  position: relative;
+
+  grid-area: showAnswer;
+  position: relative;
+
 }
 
-.inputContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "empty empty empty"
-    "blank blank blank"
-    "showAnswer . checkAnswer";
+.checkAnswer {
+  grid-area: checkAnswer;
+
+
 }
 
-.blank { grid-area: blank; }
+.checkAnswer .profile-info{
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
 
-.showAnswer { grid-area: showAnswer; }
+.empty {
+  grid-area: empty;
 
-.checkAnswer { grid-area: checkAnswer; }
+}
 
-.empty { grid-area: empty; }
+.howTo{
+  position: absolute;
+ bottom: 0;
+ right: 0;
+}
