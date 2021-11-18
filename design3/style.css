@@ -209,7 +209,7 @@ body{
 .active{
     box-shadow: var(--lm-shadow-active);
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width: 0px) {
     body{
         font-size: 15px;
     }
@@ -221,9 +221,21 @@ body{
     }
     .profile-container{
         margin-top: 24px;
+
     }
     .profile-content{
         width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 1.8fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "empty empty empty"
+          "blank blank blank"
+          " .  .  . "
+          "showAnswer . checkAnswer";
     }
     #avatar{
         width: 117px;
@@ -283,6 +295,19 @@ body{
     #no-results{
         left: 350px;
     }
+
+    .card-body  input[type="text"]{
+      color: var(--lm-text);
+      font-size: 2em;
+      font-weight: inherit;
+      background-color: inherit;
+      box-sizing: border-box;
+      border-style: solid;
+      border-color: var(--lm-text);
+      width: 27%;
+      padding: 5px;
+      border-radius: 10px;
+    }
 }
 @media screen and (min-width:1440px) {
     .container{
@@ -333,6 +358,19 @@ body{
     }
     .searchbar-container{
         height: 70px;
+    }
+
+    .card-body  input[type="text"]{
+      color: var(--lm-text);
+      font-size: 2.5em;
+      font-weight: inherit;
+      background-color: inherit;
+      box-sizing: border-box;
+      border-style: solid;
+      border-color: var(--lm-text);
+      width: 27%;
+      padding: 5px;
+      border-radius: 10px;
     }
 }
 
@@ -616,18 +654,6 @@ body{
 /* Card Body */
 
 
-.card-body  input[type="text"]{
-  color: var(--lm-text);
-  font-size: 2.5em;
-  font-weight: inherit;
-  background-color: inherit;
-  box-sizing: border-box;
-  border-style: solid;
-  border-color: var(--lm-text);
-  width: 25%;
-  padding: 5px;
-  border-radius: 10px;
-}
 
 .blank {
    grid-area: blank;

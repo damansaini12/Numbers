@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="eng-us">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +21,6 @@
         };
     </script>
 
-    <style>
-
-    </style>
 </head>
 <body>
 <div class="sidebar close">
@@ -35,6 +32,30 @@
         <span class="logo_name">Learn Numbers</span>
     </div>
     <ul class="nav-links">
+
+      <li>
+          <div class="iocn-link">
+              <a href="#">
+                  <i> <img src="icons/albanian.png" style="width: 25px;"></img></i>
+                  <span class="link_name">Albanian</span>
+              </a>
+              <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+              <li><a class="link_name" href="#">Albanian</a></li>
+              <li><a href="#">0 - 100</a></li>
+              <li><a href="#">0 - 1000</a></li>
+              <li><a href="#"><input type="text" id="firstValue" name="firstValue" value="0">-<input type="text"
+                                                                                                     id="secondValue"
+                                                                                                     name="secondValue"
+                                                                                                     value="10000"></a>
+                  <div id="btn-submit">
+                      <button class="btn-search" id="submit">Submit</button>
+                  </div>
+              </li>
+
+          </ul>
+      </li>
 
         <li>
             <div class="iocn-link">
@@ -238,7 +259,7 @@
                         <div class="profile-info">
                             <!-- <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div> -->
                             <button  class="btn-search" id="showAnswer" onclick="showAnswer()">Show Answer</button>
-                            <p style="display: inline;" id="answer"></p>
+                            <p id="answer"></p>
 
                         </div>
 
