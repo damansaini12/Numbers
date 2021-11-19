@@ -209,7 +209,7 @@ body{
 .active{
     box-shadow: var(--lm-shadow-active);
 }
-@media screen and (max-width: 0px) {
+/* @media screen and (max-width: 0px) {
     body{
         font-size: 15px;
     }
@@ -311,7 +311,7 @@ body{
       padding: 5px;
       border-radius: 10px;
     }
-}
+} */
 @media screen and (min-width:50px) {
     .container{
         max-width: 730px;
