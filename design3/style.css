@@ -153,7 +153,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--lm-bg);
+    background-color: var(--lm-bg-content);
     border-radius: 10px;
     text-align: center;
 
@@ -312,7 +312,7 @@ body{
       border-radius: 10px;
     }
 }
-@media screen and (min-width:0px) {
+@media screen and (min-width:50px) {
     .container{
         max-width: 730px;
     }
