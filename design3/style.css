@@ -209,7 +209,7 @@ body{
 .active{
     box-shadow: var(--lm-shadow-active);
 }
-@media screen and (min-width: 0px) {
+@media screen and (max-width: 0px) {
     body{
         font-size: 15px;
     }
