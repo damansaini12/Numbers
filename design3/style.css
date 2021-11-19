@@ -214,28 +214,31 @@ body{
         font-size: 15px;
     }
     .container{
-        max-width: 573px;
+        max-width: 700px;
     }
     .header{
         padding-top: 90px;
+        margin: 40px;
+
     }
     .profile-container{
         margin-top: 24px;
+        margin: 40px;
 
     }
     .profile-content{
         width: 100%;
-
+        min-height: 50%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 0.2fr 1.8fr 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-          "empty empty empty"
+          ". . ."
           "blank blank blank"
-          " .  .  . "
           "showAnswer . checkAnswer";
+
     }
     #avatar{
         width: 117px;
