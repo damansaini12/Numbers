@@ -209,99 +209,67 @@ body{
 .active{
     box-shadow: var(--lm-shadow-active);
 }
-/* @media screen and (max-width: 0px) {
+@media screen and (max-width: 1440px) {
     body{
         font-size: 15px;
     }
     .container{
         max-width: 700px;
     }
-    .header{
-        padding-top: 90px;
-        margin: 40px;
 
+    .header{
+        padding-top: 0;
     }
     .profile-container{
-        margin-top: 24px;
-        margin: 20px;
 
     }
     .profile-content{
-        width: 100%;
-        min-height: 50%;
+        max-width: 100%;
+        margin: auto;
+        min-height: 400px;
+        max-height: 400px;
+
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 0.2fr 1.8fr 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-          ". . ."
+
           "blank blank blank"
+          " .  .  . "
           "showAnswer . checkAnswer";
+    `
+    }
+    .profile-header{
+        position: relative;
+        right: 155px;
+        max-height: 100px;
+        min-width: 625px;
 
     }
-    #avatar{
-        width: 117px;
-        height: 117px;
+    .profile-name{
+        min-height: 100px;
+        justify-content: flex-start;
     }
     .profile-info-wrapper{
-        min-height: 117px;
-        justify-content: center;
-        margin-left: 40px;
-    }
-    #name{
-        font-size: 26px
-    }
-    #user{
-        font-size: 16px;
-    }
-    .profile-stats-wrapper{
-        padding-left: 160px;
-        padding-right: 70px;
-        background-color: var(--stats-wrapper);
-    }
-    .profile-stat{
-        text-align: start;
-        justify-content: center;
-        flex-grow: 1;
-    }
-    .stat-title{
-        font-size: 18px;
-        text-align: start;
-
-    }
-    .stat-value{
-        font-size: 25px;
-        text-align: start;
-    }
-    .profile-bottom-wrapper{
-        flex-direction: row;
-        flex-flow: column wrap;
         justify-content: space-between;
-        max-height: 63px;
+        flex-wrap: wrap;
+        min-width: 100%;
     }
-    #input{
-        font-size: 18px;
-    }
-    #input::placeholder{
-        font-size: 18px;
-    }
-    .searchbar-container img{
-        height: 26px;
-        width: 26px;
-        padding: 0px 22px 0px 32px;
-    }
-    .btn-search{
-        margin-right: 10px;
-        min-width: 106px;
+    .profile-info-wrapper {
+        height: 60px;
     }
     #no-results{
-        left: 350px;
+        left: 500px;
+    }
+    .searchbar-container{
+        height: 70px;
     }
 
     .card-body  input[type="text"]{
       color: var(--lm-text);
-      font-size: 2em;
+      font-size: 2.5em;
       font-weight: inherit;
       background-color: inherit;
       box-sizing: border-box;
@@ -311,13 +279,14 @@ body{
       padding: 5px;
       border-radius: 10px;
     }
-} */
-@media screen and (min-width:50px) {
+    }
+
+@media screen and (min-width:1440px) {
     .container{
         max-width: 730px;
     }
     .header{
-        padding-top: 140px
+        padding-top: 140px;
     }
     .profile-content{
         max-width: 100%;
