@@ -13,7 +13,7 @@ let trans = () => {
 };
 
 
-const fn = getRandomInt(1000); //first num
+const fn = getRandomInt(24); //first num
 const op = getRandomInt(3); //operator
 const sn = getRandomInt(11); //second num
 const operators = ["plus", "minus", "times", "divide"];
