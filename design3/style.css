@@ -274,7 +274,7 @@ body{
 
     .card-body  input[type="text"]{
       color: var(--lm-text);
-      font-size: 1.5em;
+      font-size: 1.1em;
       font-weight: inherit;
       background-color: inherit;
       box-sizing: border-box;
