@@ -1,9 +1,3 @@
-// var name = prompt("Enter your name", "User");
-//
-// document.getElementById("name").innerHTML = name;
-
-
-
 let trans = () => {
     console.log(document.documentElement);
     document.documentElement.classList.add("transition");
@@ -23,14 +17,28 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+
+
+
+const changeLang = (languageCode) => {
+
+  localStorage.setItem('lang', languageCode);
+
+  window.location.reload(false);
+  console.console.log(languageCode);
+
+};
+
 function play() {
 
-var lang = document.documentElement.lang;
-console.log(lang);
 
-console.log(fn);
+  var lang = localStorage.getItem('lang')  || 'en';
+
+  console.log(lang);
+
+  console.log(fn);
     const path = "audio/" + lang + "/" + fn + ".mp3";
-    const audio = new Audio(path);
+   const audio = new Audio(path);
     //
     // const path2 = "audio/" + lang + "/" + operators[op] + ".mp3";
     // const audio2 = new Audio(path2);
@@ -171,7 +179,7 @@ function resetInputColorIncorrect(id) {
 function resetInputColorCorrect(id) {
     document.getElementById(id).style.color = "#FFF";
     document.getElementById(id).value =
-        document.getElementById(id).defaultValue = '';
+        document.getElementById(id).defaultValue = 'Click Here';
 
         window.location.reload(false);
 

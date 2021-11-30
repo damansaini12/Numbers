@@ -16,9 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script>
-        const changeLang = (languageCode) => {
-            document.documentElement.setAttribute("lang", languageCode);
-        };
+
     </script>
 
 </head>
@@ -36,8 +34,8 @@
       <li>
           <div class="iocn-link">
               <a href="#">
-                  <i> <img src="icons/albanian.png" style="width: 25px;"></img></i>
-                  <span class="link_name">Albanian</span>
+                  <i onclick="changeLang('sq')"> <img src="icons/albanian.png" style="width: 25px;"></img></i>
+                  <span class="link_name" onclick="changeLang('sq')">Albanian</span>
               </a>
               <i class='bx bxs-chevron-down arrow'></i>
           </div>
@@ -64,8 +62,8 @@
         <li>
             <div class="iocn-link">
                 <a href="#">
-                    <i> <img src="icons/arab.png" style="width: 25px;"></img></i>
-                    <span class="link_name">Arabic</span>
+                    <i onclick="changeLang('ar')"> <img src="icons/arab.png" style="width: 25px;"></img></i>
+                    <span class="link_name" onclick="changeLang('ar')">Arabic</span>
                 </a>
                 <i class='bx bxs-chevron-down arrow'></i>
             </div>
@@ -91,7 +89,7 @@
                 <a href="#">
 
                     <i onclick="changeLang('fr')"> <img src="icons/france.png" style="width: 25px;"></img></i>
-                    <span class="link_name">French</span>
+                    <span class="link_name" onclick="changeLang('fr')">French</span>
                 </a>
                 <i class='bx bxs-chevron-down arrow'></i>
             </div>
@@ -106,7 +104,7 @@
         <li>
             <a href="#">
                 <i onclick="changeLang('de')"> <img src="icons/germany.png" style="width: 25px;"></img></i>
-                <span class="link_name" onclick="changeLanguage('de')">German</span>
+                <span class="link_name" onclick="changeLang('de')">German</span>
             </a>
             <ul class="sub-menu blank">
                 <li><a class="link_name" href="#">German</a></li>
@@ -115,8 +113,8 @@
 
         <li>
             <a href="#">
-                <i> <img src="icons/italy.png" style="width: 25px;"></img></i>
-                <span class="link_name">Italian</span>
+                <i  onclick="changeLang('it')"> <img src="icons/italy.png" style="width: 25px;"></img></i>
+                <span class="link_name"  onclick="changeLang('it')">Italian</span>
             </a>
             <ul class="sub-menu blank">
                 <li><a class="link_name" href="#">Italian</a></li>
@@ -125,8 +123,8 @@
 
         <li>
             <a href="#">
-                <i> <img src="icons/russia.png" style="width: 25px;"></img></i>
-                <span class="link_name">Russian</span>
+                <i onclick="changeLang('ru')"> <img src="icons/russia.png" style="width: 25px;"></img></i>
+                <span class="link_name" onclick="changeLang('ru')">Russian</span>
             </a>
             <ul class="sub-menu blank">
                 <li><a class="link_name" href="#">Russian</a></li>
@@ -135,8 +133,8 @@
 
         <li>
             <a href="#">
-                <i> <img src="icons/spain.png" style="width: 25px;"></img></i>
-                <span class="link_name">Spainish</span>
+                <i onclick="changeLang('es')"> <img src="icons/spain.png" style="width: 25px;"></img></i>
+                <span class="link_name" onclick="changeLang('es')">Spainish</span>
             </a>
             <ul class="sub-menu blank">
                 <li><a class="link_name" href="#">Spainish</a></li>
@@ -147,28 +145,19 @@
             <div class="iocn-link" style="">
                 <a href="#">
 
-                    <i> <img src="icons/uk.png" style="width: 25px;"></img></i>
-                    <span class="link_name">Eng-UK</span>
+                    <i onclick="changeLang('en')"> <img src="icons/en.png" style="width: 25px;"></img></i>
+                    <span class="link_name" onclick="changeLang('en')">English</span>
                 </a>
                 <i class='bx bxs-chevron-down arrow'></i>
             </div>
             <ul class="sub-menu">
-                <li><a class="link_name" href="#">Eng-UK</a></li>
+                <li><a class="link_name" href="#">English</a></li>
                 <li><a href="#">HTML & CSS</a></li>
                 <li><a href="#">JavaScript</a></li>
                 <li><a href="#">PHP & MySQL</a></li>
             </ul>
         </li>
 
-        <li>
-            <a href="#">
-                <i> <img src="icons/us.png" style="width: 25px;"></img></i>
-                <span class="link_name">Eng-US</span>
-            </a>
-            <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Eng-US</a></li>
-            </ul>
-        </li>
 
         <li>
             <div class="iocn-link">
