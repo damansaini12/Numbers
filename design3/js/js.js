@@ -30,7 +30,9 @@ const changeLang = (languageCode) => {
 
 function play() {
 
-
+  var elmnt = document.getElementById("section2");
+  elmnt.scrollIntoView();
+  
     var lang = localStorage.getItem('lang') || 'en';
 
     console.log(lang);
