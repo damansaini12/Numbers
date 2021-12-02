@@ -323,14 +323,14 @@ body {
 
     .card-body input[type="text"] {
         color: var(--lm-text);
-        font-size: 1.1em;
+        font-size: 2em;
         font-weight: inherit;
         background-color: inherit;
         box-sizing: border-box;
         border-style: solid;
         border-color: var(--lm-text);
-        width: 38%;
-        height: 35px;
+        width: 40%;
+        /* height: 35px; */
         padding: 5px;
         border-radius: 10px;
         text-align: center;
