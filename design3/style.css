@@ -22,8 +22,8 @@ body{
     background-color: var(--lm-bg);
     font-size: 13px;
     color: var(--lm-text);
-    transition: all 1.0s ease; //0.75s ease;
-    
+    transition: all 0.90s ease; //0.75s ease;
+
 }
 .container{
     max-width: 400px;
