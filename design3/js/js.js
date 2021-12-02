@@ -19,47 +19,46 @@ function getRandomInt(max) {
 }
 
 
-
-
 const changeLang = (languageCode) => {
 
-  localStorage.setItem('lang', languageCode);
+    localStorage.setItem('lang', languageCode);
 
-  window.location.reload(false);
-  console.console.log(languageCode);
+    window.location.reload(false);
+    console.console.log(languageCode);
 
 };
 
 function play() {
 
 
-  var lang = localStorage.getItem('lang')  || 'en';
+    var lang = localStorage.getItem('lang') || 'en';
 
-  console.log(lang);
-  console.log(fn);
+    console.log(lang);
+    console.log(fn);
 
-var path = "";
+    var path = "";
 
-  if (fn < 10) {
-    path = "./audio/" + lang + "/0" + fn + ".mp3";
+    if (fn < 10) {
+        path = "./audio/" + lang + "/0" + fn + ".mp3";
 
-  }else{
-    path = "audio/" + lang + "/" + fn + ".mp3";
-  }
+    } else {
+        path = "audio/" + lang + "/" + fn + ".mp3";
+    }
 
-  console.log(path);
+    console.log(path);
 
-   const audio = new Audio(path);
+    const audio = new Audio(path);
     //
     // const path2 = "audio/" + lang + "/" + operators[op] + ".mp3";
     // const audio2 = new Audio(path2);
     //
     // const path3 = "audio/" + lang + "/" + sn + ".mp3";
     // const audio3 = new Audio(path3);
+
     audio.playbackRate = 0.90;
 
     window.setTimeout(() => {
-      audio.play();
+        audio.play();
     }, 200);
 
 
@@ -70,7 +69,6 @@ var path = "";
     // setTimeout(() => {
     //     audio3.play();
     // }, 2500);
-
 
 
     // document.getElementById("ans").innerHTML = fn.toString() + operators[op] + sn.toString();
@@ -102,8 +100,8 @@ function reveal() {
         correct("firstNum");
 
         setTimeout(() => {
-          resetInputColorCorrect("firstNum");
-            }, 1000);
+            resetInputColorCorrect("firstNum");
+        }, 1000);
 
         count++;
 
@@ -164,7 +162,7 @@ function reveal() {
     //
     // }
     //
-    if (count === 1){
+    if (count === 1) {
         setTimeout(() => {
             window.location.reload(false);
         }, 1000);
@@ -176,7 +174,7 @@ function correct(id) {
     document.getElementById(id).style.color = "#50C76F";
     localStorage.setItem('numbersCorrectCount', ++numbersCorrectCount);
 
-  //  document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
+    //  document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
     console.log(localStorage.getItem('numbersCorrectCount'));
 }
 
@@ -197,16 +195,16 @@ function resetInputColorCorrect(id) {
     document.getElementById(id).value =
         document.getElementById(id).defaultValue = 'Click Here';
 
-        window.location.reload(false);
+    window.location.reload(false);
 
 }
 
 function showAnswer() // no ';' here
 {
-    document.getElementById("answer").innerHTML = fn + " = " +  numberToWords(fn);
+    document.getElementById("answer").innerHTML = fn + " = " + numberToWords(fn);
 }
 
-var numberToWords = function(num) {
+var numberToWords = function (num) {
     if (num === 0) return 'Zero'
 
     let finalString = [];
@@ -219,8 +217,7 @@ var numberToWords = function(num) {
                 if (!memoize[numberOfTimesKeyFitsNum]) memoize[numberOfTimesKeyFitsNum] = number;
 
                 finalString.push(number + ' ' + numberToWordMap.get(key) + ' ')
-            }
-            else {
+            } else {
                 finalString.push(numberToWordMap.get(key) + ' ')
             }
 
