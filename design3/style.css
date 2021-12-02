@@ -22,8 +22,8 @@ body{
     background-color: var(--lm-bg);
     font-size: 13px;
     color: var(--lm-text);
-    transition: all 0.75s ease;
-
+    transition: all 1.0s ease; //0.75s ease;
+    
 }
 .container{
     max-width: 400px;
@@ -166,7 +166,7 @@ body{
     height: 85px;
 }
 .stat-title{
-    font-size: 11px;
+    font-size: 1rem;
 }
 .stat-value{
     font-size: 16px;
