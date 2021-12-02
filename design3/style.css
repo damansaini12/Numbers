@@ -329,9 +329,11 @@ body {
         box-sizing: border-box;
         border-style: solid;
         border-color: var(--lm-text);
-        width: 27%;
+        width: 38%;
+        height: 35px;
         padding: 5px;
         border-radius: 10px;
+        text-align: center;
     }
 }
 
