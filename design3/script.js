@@ -4,32 +4,31 @@
 const searchbar = document.querySelector('.searchbar-container');
 const profilecontainer = document.querySelector('.profile-container');
 const root = document.documentElement.style;
-const get = (param)=> document.getElementById(`${param}`);
+const get = (param) => document.getElementById(`${param}`);
 const url = 'https://api.github.com/users/';
 const noresults = get('no-results')
 const btnmode = get('btn-mode')
 const modetext = get('mode-text')
-const modeicon =get('mode-icon')
+const modeicon = get('mode-icon')
 
 let darkMode = localStorage.getItem('darkModeSet') || 'true';
 
 darkMode = localStorage.getItem('darkModeSet') || 'true';
 
-  if(darkMode == 'true'){
-      darkModeProperties();
-  }else{
-      lightModeProperties()
+if (darkMode == 'true') {
+    darkModeProperties();
+} else {
+    lightModeProperties()
 
-  }
+}
 
 
+btnmode.addEventListener('click', function () {
+    darkMode = localStorage.getItem('darkModeSet') || 'true';
 
-btnmode.addEventListener('click', function(){
-  darkMode = localStorage.getItem('darkModeSet') || 'true';
-
-    if(darkMode == 'false'){
+    if (darkMode == 'false') {
         darkModeProperties()
-    }else{
+    } else {
         lightModeProperties()
     }
     console.log(darkMode);
@@ -42,7 +41,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     darkModeProperties()
 }
 
-function darkModeProperties(){
+function darkModeProperties() {
     root.setProperty('--lm-bg', '#141D2F')
     root.setProperty('--lm-bg-content', '#1E2A47')
     root.setProperty('--lm-text', 'white')
@@ -54,10 +53,10 @@ function darkModeProperties(){
     root.setProperty('--stats-wrapper', '#293857')
 
     darkMode = true
-    localStorage.setItem('darkModeSet','true')
+    localStorage.setItem('darkModeSet', 'true')
 }
 
-function lightModeProperties(){
+function lightModeProperties() {
     root.setProperty('--lm-bg', '#F6F8FF')
     root.setProperty('--lm-bg-content', '#e4eaff') // #FEFEFE
     root.setProperty('--lm-text', '#000')
