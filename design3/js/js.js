@@ -7,9 +7,10 @@ let trans = () => {
 };
 
 
-const fn = getRandomInt(24); //first num
+const fn = getRandomInt(1000); //first num
 const op = getRandomInt(3); //operator
 const sn = getRandomInt(11); //second num
+var numbersCorrectCount = localStorage.getItem('numbersCorrectCount') || '0'; //numbers the user has gotten correct
 const operators = ["plus", "minus", "times", "divide"];
 
 
@@ -35,9 +36,19 @@ function play() {
   var lang = localStorage.getItem('lang')  || 'en';
 
   console.log(lang);
-
   console.log(fn);
-    const path = "audio/" + lang + "/" + fn + ".mp3";
+
+var path = "";
+
+  if (fn < 10) {
+    path = "./audio/" + lang + "/0" + fn + ".mp3";
+
+  }else{
+    path = "audio/" + lang + "/" + fn + ".mp3";
+  }
+
+  console.log(path);
+
    const audio = new Audio(path);
     //
     // const path2 = "audio/" + lang + "/" + operators[op] + ".mp3";
@@ -45,10 +56,12 @@ function play() {
     //
     // const path3 = "audio/" + lang + "/" + sn + ".mp3";
     // const audio3 = new Audio(path3);
+    audio.playbackRate = 0.90;
 
     window.setTimeout(() => {
       audio.play();
-    }, 100);
+    }, 200);
+
 
     // setTimeout(() => {
     //     audio2.play();
@@ -161,7 +174,10 @@ function reveal() {
 
 function correct(id) {
     document.getElementById(id).style.color = "#50C76F";
+    localStorage.setItem('numbersCorrectCount', ++numbersCorrectCount);
 
+  //  document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
+    console.log(localStorage.getItem('numbersCorrectCount'));
 }
 
 function wrong(id) {
