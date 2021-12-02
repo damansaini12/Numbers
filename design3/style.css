@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Space Mono', monospace;
+    scroll-behavior: smooth;
 
 }
 
@@ -251,7 +252,7 @@ body {
 
 @media screen and (max-width: 767px) {
     body {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .container {
@@ -264,6 +265,7 @@ body {
     }
 
     .profile-container {
+      height: 40%;
 
     }
 
@@ -271,7 +273,7 @@ body {
         max-width: 100%;
         margin: auto;
         min-height: 100px;
-        max-height: 150px;
+        max-height: 220px;
 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

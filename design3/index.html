@@ -333,8 +333,10 @@
 
                 <div class="blank">
                     <div class="card-body">
-                        <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''"
+                      <a  href="#section2">
+                          <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''"
                                value="Click here" required>
+                      </a>
                     </div>
                     <br>
                     <p id="desc">Numbers are chosen between 0-1000</p>
@@ -345,7 +347,7 @@
                     <div class="profile-info">
                         <!-- <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div> -->
                         <button class="btn-search" id="showAnswer" onclick="showAnswer()">Show Answer</button>
-                        <p style="display: inline;" id="answer"></p>
+                        <p style="text-align: center;" id="answer"></p>
 
                     </div>
 
@@ -355,7 +357,7 @@
                     <div class="profile-info">
                         <button class="btn-search" id="reveal" onclick="reveal()">Check Answer</button>
 
-                        <p id="correct" style="margin-left: 0px;">Numbers you have gotten correct:
+                        <p id="correct" style="margin-left: 0px; text-align: center;">Numbers you have gotten correct:
                             <span id="numbersCorrect">
                               <script>
                               document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
@@ -372,6 +374,10 @@
 
         </div>
     </div>
+    </div>
+
+    <div id="section2">
+      
     </div>
 
 </main>
@@ -404,6 +410,7 @@
     //         reveal();
     //     }
     // });
+
 
 
 </script>
