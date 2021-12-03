@@ -1,9 +1,9 @@
 let trans = () => {
-    console.log(document.documentElement);
-    document.documentElement.classList.add("transition");
-    window.setTimeout(() => {
-        document.documentElement.classList.remove("transition");
-    }, 1000);
+  console.log(document.documentElement);
+  document.documentElement.classList.add("transition");
+  window.setTimeout(() => {
+    document.documentElement.classList.remove("transition");
+  }, 1000);
 };
 
 
@@ -15,16 +15,16 @@ const operators = ["plus", "minus", "times", "divide"];
 
 
 function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * max);
 }
 
 
 const changeLang = (languageCode) => {
 
-    localStorage.setItem('lang', languageCode);
+  localStorage.setItem('lang', languageCode);
 
-    window.location.reload(false);
-    console.console.log(languageCode);
+  window.location.reload(false);
+  console.console.log(languageCode);
 
 };
 
@@ -32,204 +32,202 @@ function play() {
 
   var elmnt = document.getElementById("section2");
   elmnt.scrollIntoView();
-  
-    var lang = localStorage.getItem('lang') || 'en';
 
-    console.log(lang);
-    console.log(fn);
+  var lang = localStorage.getItem('lang') || 'en';
+  console.log(lang);
+  console.log(fn);
 
-    var path = "";
+  var path = "";
 
-    if (fn < 10) {
-        path = "./audio/" + lang + "/0" + fn + ".mp3";
+  if (fn < 10) {
+    path = "./audio/" + lang + "/0" + fn + ".mp3";
 
-    } else {
-        path = "audio/" + lang + "/" + fn + ".mp3";
-    }
+  } else {
+    path = "audio/" + lang + "/" + fn + ".mp3";
+  }
 
-    console.log(path);
+  console.log(path);
 
-    const audio = new Audio(path);
-    //
-    // const path2 = "audio/" + lang + "/" + operators[op] + ".mp3";
-    // const audio2 = new Audio(path2);
-    //
-    // const path3 = "audio/" + lang + "/" + sn + ".mp3";
-    // const audio3 = new Audio(path3);
+  const audio = new Audio(path);
+  //
+  // const path2 = "audio/" + lang + "/" + operators[op] + ".mp3";
+  // const audio2 = new Audio(path2);
+  //
+  // const path3 = "audio/" + lang + "/" + sn + ".mp3";
+  // const audio3 = new Audio(path3);
 
-    audio.playbackRate = 0.90;
+  audio.playbackRate = 0.90;
 
-    window.setTimeout(() => {
-        audio.play();
-    }, 200);
-
-
-    // setTimeout(() => {
-    //     audio2.play();
-    // }, 1500);
-    //
-    // setTimeout(() => {
-    //     audio3.play();
-    // }, 2500);
+  window.setTimeout(() => {
+    audio.play();
+  }, 200);
 
 
-    // document.getElementById("ans").innerHTML = fn.toString() + operators[op] + sn.toString();
+  // setTimeout(() => {
+  //     audio2.play();
+  // }, 1500);
+  //
+  // setTimeout(() => {
+  //     audio3.play();
+  // }, 2500);
+
+
+  // document.getElementById("ans").innerHTML = fn.toString() + operators[op] + sn.toString();
 
 }
 
 function reveal() {
-    var count = 0;
-    var operatorCheck;
+  var count = 0;
+  var operatorCheck;
 
-    var a = document.getElementById("firstNum").value;
-    // var b = document.getElementById("operator").value;
-    // var c = document.getElementById("secondNum").value;
-    // var d = document.getElementById("total").value;
-    //
-    // console.log(b);
-    // if (b === "-" && operators[op] === "minus") operatorCheck = "-";
-    // else if (b === "+" && operators[op] === "plus") operatorCheck = "+";
-    // else if (b === "*" && operators[op] === "times") operatorCheck = "*";
-    // else if (b === "/" && operators[op] === "divide") operatorCheck = "/";
-    //
-    // var total = a.toString()+b.toString()+c.toString();
-    // console.log("Total: " + eval(total));
-    //
-    //
-    // total = eval(total);
+  var a = document.getElementById("firstNum").value;
+  // var b = document.getElementById("operator").value;
+  // var c = document.getElementById("secondNum").value;
+  // var d = document.getElementById("total").value;
+  //
+  // console.log(b);
+  // if (b === "-" && operators[op] === "minus") operatorCheck = "-";
+  // else if (b === "+" && operators[op] === "plus") operatorCheck = "+";
+  // else if (b === "*" && operators[op] === "times") operatorCheck = "*";
+  // else if (b === "/" && operators[op] === "divide") operatorCheck = "/";
+  //
+  // var total = a.toString()+b.toString()+c.toString();
+  // console.log("Total: " + eval(total));
+  //
+  //
+  // total = eval(total);
 
-    if (parseInt(a) === fn) {
-        correct("firstNum");
+  if (parseInt(a) === fn) {
+    correct("firstNum");
 
-        setTimeout(() => {
-            resetInputColorCorrect("firstNum");
-        }, 1000);
+    setTimeout(() => {
+      resetInputColorCorrect("firstNum");
+    }, 1000);
 
-        count++;
+    count++;
 
-    } else {
+  } else {
 
-        wrong("firstNum");
+    wrong("firstNum");
 
-        setTimeout(() => {
-            resetInputColorIncorrect("firstNum");
-        }, 750);
+    setTimeout(() => {
+      resetInputColorIncorrect("firstNum");
+    }, 750);
 
-    }
-    //
-    // if (b === operatorCheck) {
-    //     correct("operator");
-    //
-    //     count++;
-    //
-    // } else {
-    //
-    //     wrong("operator");
-    //
-    //     setTimeout(() => {
-    //         resetInputColor("operator");
-    //     }, 750);
-    //
-    // }
-    //
-    // if (parseInt(c) === sn) {
-    //     correct("secondNum");
-    //
-    //     count++;
-    //
-    // } else {
-    //
-    //     wrong("secondNum");
-    //
-    //     setTimeout(() => {
-    //         resetInputColor("secondNum");
-    //     }, 750);
-    //
-    // }
-    //
-    // if (parseInt(d) === total) {
-    //     correct("total");
-    //
-    //     count++;
-    //
-    //
-    //
-    // } else {
-    //
-    //     wrong("total");
-    //
-    //     setTimeout(() => {
-    //         resetInputColor("total");
-    //     }, 750);
-    //
-    // }
-    //
-    if (count === 1) {
-        setTimeout(() => {
-            window.location.reload(false);
-        }, 1000);
+  }
+  //
+  // if (b === operatorCheck) {
+  //     correct("operator");
+  //
+  //     count++;
+  //
+  // } else {
+  //
+  //     wrong("operator");
+  //
+  //     setTimeout(() => {
+  //         resetInputColor("operator");
+  //     }, 750);
+  //
+  // }
+  //
+  // if (parseInt(c) === sn) {
+  //     correct("secondNum");
+  //
+  //     count++;
+  //
+  // } else {
+  //
+  //     wrong("secondNum");
+  //
+  //     setTimeout(() => {
+  //         resetInputColor("secondNum");
+  //     }, 750);
+  //
+  // }
+  //
+  // if (parseInt(d) === total) {
+  //     correct("total");
+  //
+  //     count++;
+  //
+  //
+  //
+  // } else {
+  //
+  //     wrong("total");
+  //
+  //     setTimeout(() => {
+  //         resetInputColor("total");
+  //     }, 750);
+  //
+  // }
+  //
+  if (count === 1) {
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 1000);
 
-    }
+  }
 }
 
 function correct(id) {
-    document.getElementById(id).style.color = "#50C76F";
-    localStorage.setItem('numbersCorrectCount', ++numbersCorrectCount);
+  document.getElementById(id).style.color = "#50C76F";
+  localStorage.setItem('numbersCorrectCount', ++numbersCorrectCount);
 
-    //  document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
-    console.log(localStorage.getItem('numbersCorrectCount'));
+  //  document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
+  console.log(localStorage.getItem('numbersCorrectCount'));
 }
 
 function wrong(id) {
-    document.getElementById(id).style.color = "red";
+  document.getElementById(id).style.color = "red";
 
 }
 
 function resetInputColorIncorrect(id) {
-    document.getElementById(id).style.color = "#FFF";
-    document.getElementById(id).value =
-        document.getElementById(id).defaultValue = '';
+  document.getElementById(id).style.color = "#FFF";
+  document.getElementById(id).value =
+    document.getElementById(id).defaultValue = '';
 
 }
 
 function resetInputColorCorrect(id) {
-    document.getElementById(id).style.color = "#FFF";
-    document.getElementById(id).value =
-        document.getElementById(id).defaultValue = 'Click Here';
 
-    window.location.reload(false);
+  document.getElementById(id).style.color = "#FFF";
+
+  window.location.reload(false);
 
 }
 
 function showAnswer() // no ';' here
 {
-    document.getElementById("answer").innerHTML = fn + " = " + numberToWords(fn);
+  document.getElementById("answer").innerHTML = fn + " = " + numberToWords(fn);
 }
 
-var numberToWords = function (num) {
-    if (num === 0) return 'Zero'
+var numberToWords = function(num) {
+  if (num === 0) return 'Zero'
 
-    let finalString = [];
+  let finalString = [];
 
-    [...numberToWordMap.keys()].reverse().map(key => {
-        if (num >= key) {
-            if (key >= 100) {
-                const numberOfTimesKeyFitsNum = Math.floor(num / key);
-                const number = memoize[numberOfTimesKeyFitsNum] ? memoize[numberOfTimesKeyFitsNum] : numberToWords(numberOfTimesKeyFitsNum);
-                if (!memoize[numberOfTimesKeyFitsNum]) memoize[numberOfTimesKeyFitsNum] = number;
+  [...numberToWordMap.keys()].reverse().map(key => {
+    if (num >= key) {
+      if (key >= 100) {
+        const numberOfTimesKeyFitsNum = Math.floor(num / key);
+        const number = memoize[numberOfTimesKeyFitsNum] ? memoize[numberOfTimesKeyFitsNum] : numberToWords(numberOfTimesKeyFitsNum);
+        if (!memoize[numberOfTimesKeyFitsNum]) memoize[numberOfTimesKeyFitsNum] = number;
 
-                finalString.push(number + ' ' + numberToWordMap.get(key) + ' ')
-            } else {
-                finalString.push(numberToWordMap.get(key) + ' ')
-            }
+        finalString.push(number + ' ' + numberToWordMap.get(key) + ' ')
+      } else {
+        finalString.push(numberToWordMap.get(key) + ' ')
+      }
 
-            num = num % key;
-        }
-    });
+      num = num % key;
+    }
+  });
 
-    finalString = finalString.join('');
+  finalString = finalString.join('');
 
-    return finalString.slice(0, finalString.length - 1);
+  return finalString.slice(0, finalString.length - 1);
 };
 
 let memoize = {};
