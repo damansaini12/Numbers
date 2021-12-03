@@ -15,6 +15,7 @@
   <!-- Boxiocns CDN Link -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script>
 
@@ -287,7 +288,7 @@
         </div>
       </div>
 
-      <div class="profile-container">
+      <div class="profile-container" id="profile-container">
 
 
         <div class="profile-stats-wrapper">
@@ -312,7 +313,7 @@
           <div class="empty"></div>
 
           <div class="blank">
-            <div class="card-body">
+            <div class="card-body" id= 'card-body' >
               <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''" value="Click here" required>
               <div class="popup">
 
@@ -542,6 +543,7 @@
 
 
   </script>
+
   <script src="script.js"></script>
 
   <script src="js/js.js"></script>
