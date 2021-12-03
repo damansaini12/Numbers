@@ -189,13 +189,8 @@ function resetInputColorIncorrect(id) {
 
 function resetInputColorCorrect(id) {
 
-  // window.location.reload(false);
-  $.ajax({
-  url: "index.html",
-  context: document.body
-}).done(function() {
-  $( this ).addClass( "done" );
-});
+  window.location.reload(false);
+
 
 }
 
