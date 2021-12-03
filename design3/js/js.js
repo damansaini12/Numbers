@@ -163,12 +163,6 @@ function reveal() {
   //
   // }
   //
-  if (count === 1) {
-    setTimeout(() => {
-      window.location.reload(false);
-    }, 1000);
-
-  }
 }
 
 function correct(id) {
@@ -185,17 +179,23 @@ function wrong(id) {
 }
 
 function resetInputColorIncorrect(id) {
-  document.getElementById(id).style.color = "#FFF";
+  document.getElementById(id).style.color = '';
   document.getElementById(id).value =
     document.getElementById(id).defaultValue = '';
 
+
 }
+
 
 function resetInputColorCorrect(id) {
 
-  document.getElementById(id).style.color = "#FFF";
-
-  window.location.reload(false);
+  // window.location.reload(false);
+  $.ajax({
+  url: "index.html",
+  context: document.body
+}).done(function() {
+  $( this ).addClass( "done" );
+});
 
 }
 
