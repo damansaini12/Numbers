@@ -23,10 +23,13 @@
 </head>
 
 <body>
+
   <div class="sidebar close">
+
     <div class="logo-details">
       <i class="bx bx-menu" style="cursor: pointer;"></i>
       <div class="home-content">
+
         <span class="text"></span>
       </div>
       <span class="logo_name">Learn Numbers</span>
@@ -60,6 +63,19 @@
 
             </ul>
         </li> -->
+      <li onclick="myFunction()">
+        <div class="iocn-link">
+          <a href="#">
+            <i class="bx bx-book" style="cursor: pointer;"></i>
+
+            <span class="link_name">Instructions</span>
+          </a>
+          <!-- <i class='bx bxs-chevron-down arrow'></i> -->
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Instructions</a></li>
+        </ul>
+      </li>
 
       <li onclick="changeLang('ar')">
         <div class="iocn-link">
@@ -312,8 +328,8 @@
               <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''" value="Click here" required>
               <div class="popup">
 
-                <span class="popuptext" id="myPopup">Sound on. Click in the box and listen to the audio then type what you hear ex: 12. <br>
-                  Numbers are chosen between 0-1000
+                <span class="popuptext" id="myPopup">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
+                  Numbers are chosen between 0-1000.
                 </span>
 
               </div>
@@ -327,6 +343,11 @@
             <div class="profile-info">
               <!-- <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div> -->
               <button class="btn-search" id="showAnswer" onclick="showAnswer()">Show Answer</button>
+              <div class="popup">
+
+                <span class="popuptext" id="myPopup1">Click this button to show the answer</span>
+
+              </div>
               <p style="text-align: center;" id="answer"></p>
 
             </div>
@@ -336,9 +357,13 @@
           <div class="checkAnswer">
             <div class="profile-info">
               <button class="btn-search" id="reveal" onclick="reveal()">Check Answer</button>
+              <div class="popup">
 
+                <span class="popuptext" id="myPopup2">Click this button to check your answer or press enter</span>
+
+              </div>
               <p id="correct" style="margin-left: 0px; text-align: center;">Correct answer count:
-                <span id="numbersCorrect">
+                <span id="numbersCorrect"> 0
                   <script>
                     document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
                   </script>
@@ -359,7 +384,13 @@
     <div id="section2">
       <!-- To scroll down when page clicked in input for mobile  -->
     </div>
-    <button class="btn-search" id="popup" onclick="myFunction()" style="position:absolute; top:100vh;  transform:translateY(-100%); width:100%;">Instructions</button>
+    <button class="btn-search" id="popup" onclick="myFunction()" style="position:absolute; top:100vh; transform:translateY(-100%); width:100%;">Instructions
+      <div class="popup">
+
+        <span class="popuptext" id="myPopup3">Click below to show the instructions again</span>
+
+      </div>
+    </button>
 
 
   </main>
@@ -421,17 +452,73 @@
 </script> -->
 
   <script type="text/javascript">
-    // When the user clicks on div, open the popup
-    var popupShown = localStorage.getItem('popupShown');
+    window.setTimeout(() => {
 
-    if (popupShown !== 'true') {
-      var popup = document.getElementById("myPopup");
-      popup.classList.toggle("show");
-      localStorage.setItem('popupShown', 'true');
-      if (popup.classList.contains("show")) // Check if the popup is shown
-        setTimeout(() => popup.classList.remove("show"), 10000)
-    }
+      // When the user clicks on div, open the popup
+      var popupShown = localStorage.getItem('popupShown');
+
+      if (popupShown !== 'true') {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+
+        if (popup.classList.contains("show")) // Check if the popup is shown
+          setTimeout(() => popup.classList.remove("show"), 10000)
+      }
+
+    }, 200);
   </script>
+
+  <script type="text/javascript">
+    window.setTimeout(() => {
+
+      var popupShown = localStorage.getItem('popupShown');
+
+      if (popupShown !== 'true') {
+        var popup = document.getElementById("myPopup1");
+        popup.classList.toggle("show");
+
+        if (popup.classList.contains("show")) // Check if the popup is shown
+          setTimeout(() => popup.classList.remove("show"), 7500)
+      }
+    }, 7500);
+  </script>
+
+
+  <script type="text/javascript">
+    window.setTimeout(() => {
+
+      var popupShown = localStorage.getItem('popupShown');
+
+      if (popupShown !== 'true') {
+        var popup = document.getElementById("myPopup2");
+        popup.classList.toggle("show");
+
+        if (popup.classList.contains("show")) // Check if the popup is shown
+          setTimeout(() => popup.classList.remove("show"), 7500)
+      }
+    }, 11000);
+  </script>
+
+
+  <script type="text/javascript">
+    window.setTimeout(() => {
+
+      var popupShown = localStorage.getItem('popupShown');
+
+      if (popupShown !== 'true') {
+        var popup = document.getElementById("myPopup3");
+        popup.classList.toggle("show");
+
+        if (popup.classList.contains("show")) // Check if the popup is shown
+          setTimeout(() => popup.classList.remove("show"), 7500)
+      }
+      localStorage.setItem('popupShown', 'true');
+
+    }, 14000);
+  </script>
+
+
+
   <script>
     // When the user clicks on div, open the popup
     function myFunction() {
@@ -439,6 +526,21 @@
       popup.classList.toggle("show");
       if (popup.classList.contains("show")) // Check if the popup is shown
         setTimeout(() => popup.classList.remove("show"), 10000)
+
+      var popup1 = document.getElementById("myPopup1");
+      popup1.classList.toggle("show");
+      if (popup1.classList.contains("show")) // Check if the popup is shown
+        setTimeout(() => popup1.classList.remove("show"), 10000)
+
+      var popup2 = document.getElementById("myPopup2");
+      popup2.classList.toggle("show");
+      if (popup2.classList.contains("show")) // Check if the popup is shown
+        setTimeout(() => popup2.classList.remove("show"), 10000)
+
+      var popup3 = document.getElementById("myPopup3");
+      popup3.classList.toggle("show");
+      if (popup3.classList.contains("show")) // Check if the popup is shown
+        setTimeout(() => popup3.classList.remove("show"), 10000)
 
     }
   </script>
