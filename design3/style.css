@@ -26,7 +26,9 @@ body {
     font-size: 13px;
     color: var(--lm-text);
     transition: all 0.90s ease;
-/ / 0.75 s ease;
+ /* 0.75 s ease; */
+
+ width: 99vw;
 
 }
 
