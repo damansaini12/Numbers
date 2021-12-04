@@ -371,6 +371,10 @@ body {
     animation: fadeIn 1s;
   }
 
+#infoCircle {
+      margin-left: 60px;
+  }
+
   /* Add animation (fade in the popup) */
   @-webkit-keyframes fadeIn {
     from {
@@ -555,6 +559,10 @@ body {
       opacity: 1;
     }
   }
+  #infoCircle {
+        margin-left: 80px;
+    }
+
 
 
 }
@@ -1051,4 +1059,34 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--lm-bg);
+  color: var(--lm-text);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  width: 150px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

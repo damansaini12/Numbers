@@ -294,17 +294,17 @@
         <div class="profile-stats-wrapper">
 
           <div class="profile-stat">
-            <p class="stat-title"><strong>Easy</strong></p>
+            <p class="stat-title">In Order</p>
             <p id="repos" class="stat-value"></p>
           </div>
           <div class="profile-stat">
-            <p class="stat-title">Medium</p>
+            <p class="stat-title"><strong>Random</strong></p>
             <p id="followers" class="stat-value"></p>
           </div>
-          <div class="profile-stat">
+          <!-- <div class="profile-stat">
             <p class="stat-title">Hard</p>
             <p id="following" class="stat-value"></p>
-          </div>
+          </div> -->
         </div>
 
         <div class="profile-content">
@@ -313,8 +313,22 @@
           <div class="empty"></div>
 
           <div class="blank">
+
             <div class="card-body" id= 'card-body' >
-              <input type="text" inputmode="numeric" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''" value="Click here" required>
+                <label>Click Below</label>
+                <div class="tooltip">
+                  <i id="infoCircle" class="bx bx-info-circle" style=" cursor: pointer;"></i>
+                  <span class="tooltiptext">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
+                    Numbers are chosen between 0-1000.</span>
+                </div>
+
+
+                <!-- <i class="bx info-circle" style="cursor: pointer; width: 25px;"></i>
+                <box-icon type='solid' name='info-circle'></box-icon> -->
+                <br>
+
+
+              <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''" value="Ex: 12" required>
               <div class="popup">
 
                 <span class="popuptext" id="myPopup">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
