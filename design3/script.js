@@ -51,6 +51,7 @@ function darkModeProperties() {
     modeicon.src = "./assets/icon-sun.svg"
     root.setProperty('--lm-icon-bg', 'brightness(1000%)')
     root.setProperty('--stats-wrapper', '#293857')
+    root.setProperty('--lm-text-correct', '#21dd21')
 
     darkMode = true
     localStorage.setItem('darkModeSet', 'true')
@@ -66,6 +67,8 @@ function lightModeProperties() {
     modeicon.src = "./assets/icon-moon.svg"
     root.setProperty('--lm-icon-bg', 'brightness(100%)')
     root.setProperty('--stats-wrapper', '$F6F8FF')
+    root.setProperty('--lm-text-correct', 'green')
+
     darkMode = false
     localStorage.setItem('darkModeSet', 'false')
 }

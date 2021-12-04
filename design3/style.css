@@ -6,6 +6,7 @@
   --lm-shadow-active: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
   --lm-icon-bg: brightness(1000%);
+  --lm-text-correct: #21dd21;
   /* Btn */
   --btn: #0079FF;
   --btn-hover: #60ABFF;
@@ -1089,4 +1090,9 @@ body {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+#numbersCorrect{
+  color: var(--lm-text-correct);
+  font-size: 15px;
 }
