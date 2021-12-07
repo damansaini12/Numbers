@@ -294,11 +294,22 @@
         <div class="profile-stats-wrapper">
 
           <div class="profile-stat">
-            <p class="stat-title">In Order</p>
+            <div class="tooltip">
+              <p class="stat-title" style="cursor: pointer;">In Order</p>
+              <span class="tooltiptext">0,1,2,3...1000</span>
+            </div>
+
             <p id="repos" class="stat-value"></p>
           </div>
+
           <div class="profile-stat">
+            <div class="tooltip">
+
             <p class="stat-title"><strong>Random</strong></p>
+            <span class="tooltiptext">120,181,287,364,578</span>
+
+          </div>
+
             <p id="followers" class="stat-value"></p>
           </div>
           <!-- <div class="profile-stat">
@@ -336,6 +347,7 @@
                 </span>
 
               </div>
+              <p id="inputInfo"></p>
             </div>
             <br>
             <!-- <p id="desc">Numbers are chosen between 0-1000</p> -->
@@ -396,6 +408,8 @@
       </div>
     </button>
 
+    <div id="snackbar"></div>
+
 
   </main>
 
@@ -428,7 +442,6 @@
     // });
   </script>
 
-
   <script>
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
@@ -445,15 +458,18 @@
     });
   </script>
 
+
+  <script type="text/javascript">
+    console.log(localStorage.getItem('lang'));
+
+      if (localStorage.getItem('lang') === null) {
+        sidebar.classList.toggle("close");
+      }
+  </script>
+
+
   <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 
-  <!-- <script type="text/javascript">
-  // When the user clicks on div, open the popup
-
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-
-</script> -->
 
   <script type="text/javascript">
     window.setTimeout(() => {
@@ -548,15 +564,6 @@
     }
   </script>
 
-  <script type="text/javascript">
-    console.log(localStorage.getItem('lang'));
-
-      if (localStorage.getItem('lang') === null) {
-        sidebar.classList.toggle("close");
-      }
-
-
-  </script>
 
   <script src="script.js"></script>
 
