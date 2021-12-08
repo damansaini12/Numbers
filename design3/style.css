@@ -259,10 +259,12 @@ body {
 
   .header {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .profile-container {
     height: 40%;
+    margin-top: 0px;
   }
 
   .profile-content {
@@ -307,6 +309,10 @@ body {
     left: 500px;
   }
 
+  .profile-info {
+    margin-top: 30%;
+  }
+
   .searchbar-container {
     height: 70px;
   }
@@ -324,6 +330,10 @@ body {
     padding: 5px;
     border-radius: 10px;
     text-align: center;
+  }
+
+  .btn-search {
+    font-size: 12px;
   }
 
   .popup {
@@ -372,8 +382,8 @@ body {
     animation: fadeIn 1s;
   }
 
-#infoCircle {
-      margin-left: 60px;
+  #infoCircle {
+    margin-left: 60px;
   }
 
   /* Add animation (fade in the popup) */
@@ -428,7 +438,7 @@ body {
   }
 
   .header {
-    padding-top: 0;
+    padding-top: 140px;
   }
 
   .profile-container {}
@@ -560,12 +570,10 @@ body {
       opacity: 1;
     }
   }
+
   #infoCircle {
-        margin-left: 80px;
-    }
-
-
-
+    margin-left: 80px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1011,7 +1019,6 @@ body {
 @Media only screen and (max-width: 900px) {
   .sidebar.close .nav-links li .sub-menu {
     display: none;
-
   }
 
   .sidebar.close .nav-links {
@@ -1062,7 +1069,6 @@ body {
   right: 0;
 }
 
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -1077,13 +1083,11 @@ body {
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
   /* Position the tooltip */
   width: 150px;
   bottom: 100%;
   left: 50%;
   margin-left: -60px;
-
   position: absolute;
   z-index: 1;
 }
@@ -1092,7 +1096,7 @@ body {
   visibility: visible;
 }
 
-#numbersCorrect{
+#numbersCorrect {
   color: var(--lm-text-correct);
   font-size: 15px;
 }
@@ -1102,7 +1106,7 @@ body {
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color:var(--lm-bg-content);
+  background-color: var(--lm-bg-content);
   color: var(--lm-text);
   text-align: center;
   border-radius: 2px;
@@ -1110,7 +1114,7 @@ body {
   position: fixed;
   z-index: 1;
   left: 50%;
-  top:  30px;
+  top: 30px;
   font-size: 17px;
   /* border: 2px solid var(--lm-text); */
 }
@@ -1121,23 +1125,50 @@ body {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-
 @-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
-  from {top: 0; opacity: 0;}
-  to {top: 30px; opacity: 1;}
+  from {
+    top: 0;
+    opacity: 0;
+  }
+
+  to {
+    top: 30px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeout {
-  from {top: 30px; opacity: 1;}
-  to {top: 0; opacity: 0;}
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+
+  to {
+    top: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes fadeout {
-  from {top: 30px; opacity: 1;}
-  to {top: 0; opacity: 0;}
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+
+  to {
+    top: 0;
+    opacity: 0;
+  }
 }
