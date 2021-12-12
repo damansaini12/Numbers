@@ -6,18 +6,15 @@ let trans = () => {
     }, 1000);
 };
 
-
 const fn = getRandomInt(1000); //first num
 const op = getRandomInt(3); //operator
 const sn = getRandomInt(11); //second num
 var numbersCorrectCount = localStorage.getItem('numbersCorrectCount') || '0'; //numbers the user has gotten correct
 const operators = ["plus", "minus", "times", "divide"];
 
-
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
-
 
 const changeLang = (languageCode) => {
 
@@ -28,8 +25,7 @@ const changeLang = (languageCode) => {
         sidebar.classList.toggle("close");
     }
 
-    document.getElementById("firstNum").innerHTML = "Ex: 12";
-    console.log(document.getElementById("firstNum").innerHTML = "Ex: 12");
+    document.getElementById("firstNum").innerHTML = "";
     console.log(languageCode);
 
     window.setTimeout(() => {
@@ -39,6 +35,7 @@ const changeLang = (languageCode) => {
 };
 
 function snackbar() {
+
     var x = document.getElementById("snackbar");
     var language = localStorage.getItem('lang');
 
@@ -76,9 +73,7 @@ function snackbar() {
     }, 3000);
 }
 
-
 function play() {
-
     //to scrool the page for mobile when the user clicks on the input
     var elmnt = document.getElementById("section2");
     elmnt.scrollIntoView();
@@ -127,7 +122,7 @@ function play() {
 
 }
 
-function reveal() {
+function continueButton() {
     var operatorCheck;
 
     var a = document.getElementById("firstNum").value;
@@ -159,12 +154,10 @@ function reveal() {
 
         wrong("firstNum");
 
-        setTimeout(() => {
-            resetInputColorIncorrect("firstNum");
-        }, 750);
+        resetInputColorIncorrect("firstNum");
 
     }
-    //
+
 }
 
 function correct(id) {
@@ -198,7 +191,12 @@ function reloadPage(id) {
 }
 
 function showAnswer() { // no ';' here
-    document.getElementById("answer").innerHTML = fn + " = " + numberToWords(fn);
+
+  document.getElementById("answer").innerHTML = fn + " = " + numberToWords(fn);
+
+  var x = document.getElementById("hint");
+  x.style.display = "block";
+
 }
 
 //public static ArrayList<Integer> integerToTriplets(int number) {
@@ -519,6 +517,10 @@ if (localStorage.getItem('lang') === 'de') {
 }
 //Numbers to words in Hindi
 //Numbers to words in italian
+if (localStorage.getItem('lang') === 'it') {
+
+
+}
 //Numbers to words in japanese
 //Numbers to words in Portuguese
 //Numbers to words in Punjabi
