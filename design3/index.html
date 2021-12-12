@@ -38,32 +38,32 @@
     <ul class="nav-links">
 
       <!-- <li>
-            <div class="iocn-link">
-                <a href="#">
-                    <i onclick="changeLang('sq')"> <img src="icons/albanian.png" style="width: 25px;"></img></i>
-                    <span class="link_name" onclick="changeLang('sq')">Albanian</span>
-                </a>
-                <i class='bx bxs-chevron-down arrow'></i>
-            </div>
-            <ul class="sub-menu">
-                <li><a class="link_name" href="#">Albanian</a></li>
-                <li><a href="#">0 - 100</a></li>
-                  <ul class="sub-menu2">
-                    <li><a href="#">Number are selected randomly between 0-100</a></li>
-                  </ul>
+              <div class="iocn-link">
+                  <a href="#">
+                      <i onclick="changeLang('sq')"> <img src="icons/albanian.png" style="width: 25px;"></img></i>
+                      <span class="link_name" onclick="changeLang('sq')">Albanian</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+              </div>
+              <ul class="sub-menu">
+                  <li><a class="link_name" href="#">Albanian</a></li>
+                  <li><a href="#">0 - 100</a></li>
+                    <ul class="sub-menu2">
+                      <li><a href="#">Number are selected randomly between 0-100</a></li>
+                    </ul>
 
-                <li><a href="#">0 - 1000</a></li>
-                <li><a href="#"><input type="text" id="firstValue" name="firstValue" value="0">-<input type="text"
-                                                                                                       id="secondValue"
-                                                                                                       name="secondValue"
-                                                                                                       value="10000"></a>
-                    <div id="btn-submit">
-                        <button class="btn-search" id="submit">Submit</button>
-                    </div>
-                </li>
+                  <li><a href="#">0 - 1000</a></li>
+                  <li><a href="#"><input type="text" id="firstValue" name="firstValue" value="0">-<input type="text"
+                                                                                                         id="secondValue"
+                                                                                                         name="secondValue"
+                                                                                                         value="10000"></a>
+                      <div id="btn-submit">
+                          <button class="btn-search" id="submit">Submit</button>
+                      </div>
+                  </li>
 
-            </ul>
-        </li> -->
+              </ul>
+          </li> -->
 
 
       <li onclick="changeLang('ar')">
@@ -90,15 +90,15 @@
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Bengali</a></li>
           <!-- <li><a href="#">0 - 100</a></li>
-                <li><a href="#">0 - 1000</a></li>
-                <li><a href="#"><input type="text" id="firstValue" name="firstValue" value="0">-<input type="text"
-                                                                                                       id="secondValue"
-                                                                                                       name="secondValue"
-                                                                                                       value="10000"></a>
-                    <div id="btn-submit">
-                        <button class="btn-search" id="submit">Submit</button>
-                    </div>
-                </li> -->
+                      <li><a href="#">0 - 1000</a></li>
+                      <li><a href="#"><input type="text" id="firstValue" name="firstValue" value="0">-<input type="text"
+                                                                                                             id="secondValue"
+                                                                                                             name="secondValue"
+                                                                                                             value="10000"></a>
+                          <div id="btn-submit">
+                              <button class="btn-search" id="submit">Submit</button>
+                          </div>
+                      </li> -->
 
         </ul>
       </li>
@@ -199,7 +199,6 @@
       </li>
 
 
-
       <li onclick="changeLang('pa')">
         <a href="#">
           <i> <img src="icons/punjab.png" style="width: 30px;"></img></i>
@@ -287,157 +286,173 @@
           <div class="icon-container"><img id="mode-icon" src="./assets/icon-sun.svg" alt=""></div>
         </div>
       </div>
+      <div class="theCard">
+        <div class="theCard">
+          <div class="theFront">
 
-      <div class="profile-container" id="profile-container">
+          <div class="profile-container" id="profile-container">
 
 
-        <div class="profile-stats-wrapper">
+            <div class="profile-stats-wrapper">
 
-          <div class="profile-stat">
-            <div class="tooltip">
-              <p class="stat-title" style="cursor: pointer;">In Order</p>
-              <span class="tooltiptext">0,1,2,3...1000</span>
+              <div class="profile-stat">
+                <div class="tooltip">
+                  <p class="stat-title" style="cursor: pointer;">In Order</p>
+                  <span class="tooltiptext">0,1,2,3...1000</span>
+                </div>
+
+                <p id="repos" class="stat-value"></p>
+              </div>
+
+              <div class="profile-stat">
+                <div class="tooltip">
+
+                  <p class="stat-title"><strong>Random</strong></p>
+                  <span class="tooltiptext">120,181,287,364,578</span>
+
+                </div>
+
+                <p id="followers" class="stat-value"></p>
+              </div>
+              <!-- <div class="profile-stat">
+                      <p class="stat-title">Hard</p>
+                      <p id="following" class="stat-value"></p>
+                    </div> -->
             </div>
 
-            <p id="repos" class="stat-value"></p>
-          </div>
+            <div class="profile-content">
+              <!-- width 493 x 517 mobile
+                          width 480 x 400 web  -->
+              <div class="empty"></div>
 
-          <div class="profile-stat">
-            <div class="tooltip">
+              <div class="blank">
 
-            <p class="stat-title"><strong>Random</strong></p>
-            <span class="tooltiptext">120,181,287,364,578</span>
+                <div class="card-body" id='card-body'>
+                  <label>Click Below</label>
+                  <div class="tooltip">
+                    <i id="infoCircle" class="bx bx-info-circle" style=" cursor: pointer;"></i>
+                    <span class="tooltiptext">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
+                      Numbers are chosen between 0-1000.</span>
+                  </div>
 
-          </div>
+                  <br>
 
-            <p id="followers" class="stat-value"></p>
-          </div>
-          <!-- <div class="profile-stat">
-            <p class="stat-title">Hard</p>
-            <p id="following" class="stat-value"></p>
-          </div> -->
-        </div>
 
-        <div class="profile-content">
-          <!-- width 493 x 517 mobile
-                width 480 x 400 web  -->
-          <div class="empty"></div>
+                  <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''" value="" inputmode="numeric" required>
+                  <div class="popup">
 
-          <div class="blank">
+                    <span class="popuptext" id="myPopup">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
+                      Numbers are chosen between 0-1000.
+                    </span>
 
-            <div class="card-body" id= 'card-body' >
-                <label>Click Below</label>
-                <div class="tooltip">
-                  <i id="infoCircle" class="bx bx-info-circle" style=" cursor: pointer;"></i>
-                  <span class="tooltiptext">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
-                    Numbers are chosen between 0-1000.</span>
+                  </div>
+                  <p id="inputInfo"></p>
+                </div>
+                <br>
+                <!-- <p id="desc">Numbers are chosen between 0-1000</p> -->
+              </div>
+
+              <div class="showAnswer">
+
+                <div class="profile-info">
+                  <!-- <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div> -->
+                  <button class="btn-search" id="showAnswer" onclick="showAnswer()">Reveal</button>
+                  <div class="popup">
+
+                    <span class="popuptext" id="myPopup1">Click this button to show the answer</span>
+
+                  </div>
+                  <!-- <p style="text-align: center;" id="answer"></p> -->
+
+                </div>
+
+              </div>
+
+              <div class="checkAnswer">
+                <div class="profile-info">
+                  <button class="btn-search" id="reveal" onclick="continueButton()">Continue</button>
+                  <div class="popup">
+
+                    <span class="popuptext" id="myPopup2">Click this button to check <br>your answer or press enter</span>
+
+                  </div>
+                  <p id="correct" style="margin-left: 0px; text-align: center;">Correct answer count:
+                    <strong><span id="numbersCorrect"> 0
+                        <script>
+                          document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
+                        </script>
+                      </span>
+                    </strong>
+                  </p>
                 </div>
 
 
-                <!-- <i class="bx info-circle" style="cursor: pointer; width: 25px;"></i>
-                <box-icon type='solid' name='info-circle'></box-icon> -->
-                <br>
-
-
-              <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''" value="Ex: 12" inputmode="numeric" required>
-              <div class="popup">
-
-                <span class="popuptext" id="myPopup">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
-                  Numbers are chosen between 0-1000.
-                </span>
-
               </div>
-              <p id="inputInfo"></p>
-            </div>
-            <br>
-            <!-- <p id="desc">Numbers are chosen between 0-1000</p> -->
-          </div>
-
-          <div class="showAnswer">
-
-            <div class="profile-info">
-              <!-- <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div> -->
-              <button class="btn-search" id="showAnswer" onclick="showAnswer()">Show Answer</button>
-              <div class="popup">
-
-                <span class="popuptext" id="myPopup1">Click this button to show the answer</span>
-
-              </div>
-              <p style="text-align: center;" id="answer"></p>
 
             </div>
 
-          </div>
-
-          <div class="checkAnswer">
-            <div class="profile-info">
-              <button class="btn-search" id="reveal" onclick="reveal()">Check Answer</button>
-              <div class="popup">
-
-                <span class="popuptext" id="myPopup2">Click this button to check <br>your answer or press enter</span>
-
-              </div>
-              <p id="correct" style="margin-left: 0px; text-align: center;">Correct answer count:
-                <strong><span id="numbersCorrect"> 0
-                    <script>
-                      document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
-                    </script>
-                  </span>
-                </strong>
-              </p>
-            </div>
 
 
           </div>
+          </div>
+          <div class="theBack">
 
+          </div>
         </div>
-
-
+      </div>
+      <div class="theCard">
       </div>
     </div>
     </div>
 
-    <div id="section2">
-      <!-- To scroll down when page clicked in input for mobile  -->
-    </div>
-    <button class="btn-search" id="popup" onclick="myFunction()" style="position:fixed; top: 100vh; transform:translateY(-100%); width:100%;">Instructions
-      <div class="popup">
-
-        <span class="popuptext" id="myPopup3">Click below to show the instructions again</span>
-
-      </div>
-    </button>
-
-    <div id="snackbar"></div>
 
 
   </main>
+
+  <div id="hint">
+    <p style="text-align: center;" id="answer"></p>
+  </div>
+
+  <div id="section2">
+    <!-- To scroll down when page clicked in input for mobile  -->
+  </div>
+  <button class="btn-search" id="popup" onclick="myFunction()" style="position:fixed; top: 100vh; transform:translateY(-100%); width:100%;">Instructions
+    <div class="popup">
+
+      <span class="popuptext" id="myPopup3">Click below to show the instructions again</span>
+
+    </div>
+  </button>
+
+  <div id="snackbar"></div>
+
+
 
 
   <script>
     var x = document.getElementById("firstNum");
     x.addEventListener("keydown", function(e) {
       if (e.key === "Enter") {
-        reveal();
+        continueButton();
       }
     });
     //
     // var input2 = document.getElementById("operator");
     // input2.addEventListener("keydown", function (e) {
     //     if (e.key === "Enter") {
-    //         reveal();
+    //         continueButton();
     //     }
     // });
     // var input3 = document.getElementById("secondNum");
     // input3.addEventListener("keydown", function (e) {
     //     if (e.key === "Enter") {
-    //         reveal();
+    //         continueButton();
     //     }
     // });
     // var input4 = document.getElementById("total");
     // input4.addEventListener("keydown", function (e) {
     //     if (e.key === "Enter") {
-    //         reveal();
+    //         continueButton();
     //     }
     // });
   </script>
@@ -462,9 +477,9 @@
   <script type="text/javascript">
     console.log(localStorage.getItem('lang'));
 
-      if (localStorage.getItem('lang') === null) {
-        sidebar.classList.toggle("close");
-      }
+    if (localStorage.getItem('lang') === null) {
+      sidebar.classList.toggle("close");
+    }
   </script>
 
 
@@ -535,7 +550,6 @@
 
     }, 14000);
   </script>
-
 
 
   <script>
