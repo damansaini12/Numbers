@@ -275,6 +275,7 @@ body {
     grid-template-areas:
       "blank blank blank"
       ". . . "
+      "empty empty empty"
       "showAnswer . checkAnswer";
   }
 
@@ -425,9 +426,10 @@ body {
   #hint {
     min-width: 50px;
     max-width: 300px;
+    height: fit-content;
     margin: 40px;
     position: relative;
-    left: 15px;
+    align-items: center;
     right: 0;
     bottom: 40px;
     padding: 15px 0 25px 0;
@@ -438,6 +440,11 @@ body {
     box-shadow: var(--lm-shadow-inactive);
     display: none;
   }
+
+  .mobileBar{
+    margin-left: 90px;
+  }
+
 }
 
 @media screen and (min-width: 767px) {
@@ -601,9 +608,9 @@ body {
     z-index: -1;
     border-radius: var(--border-radius);
     box-shadow: var(--lm-shadow-inactive);
-    /* border-top-left-radius: 5px;
-      border-top-right-radius: 5px; */
-    /* box-shadow: 0 0 10px 0 rgba(173, 169, 169, 0.5); */
+    display: none;
+  }
+  .mobileBar{
     display: none;
   }
 }
@@ -803,7 +810,7 @@ body {
   height: 50px;
   min-width: 78px;
   text-align: center;
-  line-height: 50px;
+  line-height: 60px;
 }
 
 .sidebar .logo-details .logo_name {
@@ -860,7 +867,7 @@ body {
   height: 50px;
   min-width: 78px;
   text-align: center;
-  line-height: 50px;
+  line-height: 60px;
   color: var(--lm-text);
   font-size: 20px;
   cursor: pointer;

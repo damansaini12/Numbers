@@ -280,7 +280,7 @@
   <main>
     <div class="container">
       <div class="header">
-        <h1 class="title">Numbers</h1>
+        <h1 class="title">Learn Numbers</h1>
         <div id="btn-mode">
           <p id="mode-text">LIGHT</p>
           <div class="icon-container"><img id="mode-icon" src="./assets/icon-sun.svg" alt=""></div>
@@ -290,118 +290,111 @@
         <div class="theCard">
           <div class="theFront">
 
-          <div class="profile-container" id="profile-container">
+            <div class="profile-container" id="profile-container">
 
 
-            <div class="profile-stats-wrapper">
+              <div class="profile-stats-wrapper">
 
-              <div class="profile-stat">
-                <div class="tooltip">
-                  <p class="stat-title" style="cursor: pointer;">In Order</p>
-                  <span class="tooltiptext">0,1,2,3...1000</span>
+                <div class="profile-stat">
+                  <div class="tooltip">
+                    <p class="stat-title" style="cursor: pointer;">In Order</p>
+                    <span class="tooltiptext">0,1,2,3...1000</span>
+                  </div>
+
+                  <p id="repos" class="stat-value"></p>
                 </div>
 
-                <p id="repos" class="stat-value"></p>
-              </div>
+                <div class="profile-stat">
+                  <div class="tooltip">
 
-              <div class="profile-stat">
-                <div class="tooltip">
+                    <p class="stat-title"><strong>Random</strong></p>
+                    <span class="tooltiptext">120,181,287,364,578</span>
 
-                  <p class="stat-title"><strong>Random</strong></p>
-                  <span class="tooltiptext">120,181,287,364,578</span>
+                  </div>
 
+                  <p id="followers" class="stat-value"></p>
                 </div>
-
-                <p id="followers" class="stat-value"></p>
-              </div>
-              <!-- <div class="profile-stat">
+                <!-- <div class="profile-stat">
                       <p class="stat-title">Hard</p>
                       <p id="following" class="stat-value"></p>
                     </div> -->
-            </div>
+              </div>
 
-            <div class="profile-content">
-              <!-- width 493 x 517 mobile
+              <div class="profile-content">
+                <!-- width 493 x 517 mobile
                           width 480 x 400 web  -->
-              <div class="empty"></div>
+                <div class="empty"></div>
 
-              <div class="blank">
+                <div class="blank">
 
-                <div class="card-body" id='card-body'>
-                  <label>Click Below</label>
-                  <div class="tooltip">
-                    <i id="infoCircle" class="bx bx-info-circle" style=" cursor: pointer;"></i>
-                    <span class="tooltiptext">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
-                      Numbers are chosen between 0-1000.</span>
-                  </div>
+                  <div class="card-body" id='card-body'>
+                    <label>Click Below</label>
+                    <div class="tooltip">
+                      <i id="infoCircle" class="bx bx-info-circle" style=" cursor: pointer;"></i>
+                      <span class="tooltiptext">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
+                        Numbers are chosen between 0-1000.</span>
+                    </div>
 
-                  <br>
+                    <br>
 
 
-                  <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''" value="" inputmode="numeric" required>
-                  <div class="popup">
+                    <input type="text" id="firstNum" name="firstNum" onclick="play()" onfocus="this.value=''" value="" inputmode="numeric" required>
+                    <div class="popup">
 
-                    <span class="popuptext" id="myPopup">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
-                      Numbers are chosen between 0-1000.
-                    </span>
-
-                  </div>
-                  <p id="inputInfo"></p>
-                </div>
-                <br>
-                <!-- <p id="desc">Numbers are chosen between 0-1000</p> -->
-              </div>
-
-              <div class="showAnswer">
-
-                <div class="profile-info">
-                  <!-- <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div> -->
-                  <button class="btn-search" id="showAnswer" onclick="showAnswer()">Reveal</button>
-                  <div class="popup">
-
-                    <span class="popuptext" id="myPopup1">Click this button to show the answer</span>
-
-                  </div>
-                  <!-- <p style="text-align: center;" id="answer"></p> -->
-
-                </div>
-
-              </div>
-
-              <div class="checkAnswer">
-                <div class="profile-info">
-                  <button class="btn-search" id="reveal" onclick="continueButton()">Continue</button>
-                  <div class="popup">
-
-                    <span class="popuptext" id="myPopup2">Click this button to check <br>your answer or press enter</span>
-
-                  </div>
-                  <p id="correct" style="margin-left: 0px; text-align: center;">Correct answer count:
-                    <strong><span id="numbersCorrect"> 0
-                        <script>
-                          document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
-                        </script>
+                      <span class="popuptext" id="myPopup">Sound on.<br><br> Click in the box and listen to the audio then type what you hear. Ex: 12.<br> <br>
+                        Numbers are chosen between 0-1000.
                       </span>
-                    </strong>
-                  </p>
+
+                    </div>
+                    <p id="inputInfo"></p>
+                  </div>
+                  <br>
+                  <!-- <p id="desc">Numbers are chosen between 0-1000</p> -->
                 </div>
 
+                <div class="showAnswer">
 
+                  <div class="profile-info">
+                    <!-- <div class="bottom-icons"><img src="./assets/icon-twitter.svg" alt=""></div> -->
+                    <button class="btn-search" id="showAnswer" onclick="showAnswer()">Reveal</button>
+                    <div class="popup">
+
+                      <span class="popuptext" id="myPopup1">Click this button to show the answer</span>
+
+                    </div>
+                    <!-- <p style="text-align: center;" id="answer"></p> -->
+
+                  </div>
+
+                </div>
+
+                <div class="checkAnswer">
+                  <div class="profile-info">
+                    <button class="btn-search" id="reveal" onclick="continueButton()">Continue</button>
+                    <div class="popup">
+
+                      <span class="popuptext" id="myPopup2">Click this button to check <br>your answer or press enter</span>
+
+                    </div>
+                    <p id="correct" style="margin-left: 0px; text-align: center;">Correct answer count:
+                      <strong><span id="numbersCorrect"> 0
+                          <script>
+                            document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
+                          </script>
+                        </span>
+                      </strong>
+                    </p>
+                  </div>
+                </div>
               </div>
-
             </div>
-
-
-
-          </div>
-          </div>
-          <div class="theBack">
-
           </div>
         </div>
       </div>
-      <div class="theCard">
+      <div id="hint">
+        <p style="text-align: center;" id="answer"></p>
       </div>
+
     </div>
     </div>
 
@@ -409,9 +402,6 @@
 
   </main>
 
-  <div id="hint">
-    <p style="text-align: center;" id="answer"></p>
-  </div>
 
   <div id="section2">
     <!-- To scroll down when page clicked in input for mobile  -->
