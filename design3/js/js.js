@@ -9,7 +9,7 @@ let trans = () => {
 const fn = getRandomInt(1000); //first num
 // const op = getRandomInt(3); //operator
 // const sn = getRandomInt(11); //second num
-var numbersCorrectCount = sessionStorage.getItem('numbersCorrectCount') || '0'; //numbers the user has gotten correct
+var numbersCorrectCount = localStorage.getItem('numbersCorrectCount') || '0'; //numbers the user has gotten correct
 // const operators = ["plus", "minus", "times", "divide"];
 
 function getRandomInt(max) {
@@ -162,10 +162,10 @@ function continueButton() {
 
 function correct(id) {
     document.getElementById(id).style.color = "#50C76F";
-    sessionStorage.setItem('numbersCorrectCount', ++numbersCorrectCount);
+    localStorage.setItem('numbersCorrectCount', ++numbersCorrectCount);
 
     //  document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
-    console.log(sessionStorage.getItem('numbersCorrectCount'));
+    console.log(localStorage.getItem('numbersCorrectCount'));
 
 }
 
