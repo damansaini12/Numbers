@@ -16,6 +16,7 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
 
   <script>
 
@@ -296,6 +297,23 @@
               <div class="profile-stats-wrapper">
 
                 <div class="profile-stat">
+
+                  <p class="stat-title">
+                  <div class="flame">
+                    <i id="flame" class="bx bxs-hot bx-sm" ></i>
+                    <span id="numbersCorrect"> 0
+                      <script>
+                        document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
+                      </script>
+                    </span>
+                    / 50</p>
+                  </div>
+
+
+                  <p id="repos" class="stat-value"></p>
+                </div>
+
+                <!-- <div class="profile-stat">
                   <div class="tooltip">
                     <p class="stat-title" style="cursor: pointer;">In Order</p>
                     <span class="tooltiptext">0,1,2,3...1000</span>
@@ -313,7 +331,7 @@
                   </div>
 
                   <p id="followers" class="stat-value"></p>
-                </div>
+                </div> -->
                 <!-- <div class="profile-stat">
                       <p class="stat-title">Hard</p>
                       <p id="following" class="stat-value"></p>
@@ -376,14 +394,14 @@
                       <span class="popuptext" id="myPopup2">Click this button to check <br>your answer or press enter</span>
 
                     </div>
-                    <p id="correct" style="margin-left: 0px; text-align: center;">Correct answer count:
+                    <!-- <p id="correct" style="margin-left: 0px; text-align: center;">Correct answer count:
                       <strong><span id="numbersCorrect"> 0
                           <script>
                             document.getElementById("numbersCorrect").innerHTML = localStorage.getItem('numbersCorrectCount');
                           </script>
                         </span>
                       </strong>
-                    </p>
+                    </p> -->
                   </div>
                 </div>
               </div>

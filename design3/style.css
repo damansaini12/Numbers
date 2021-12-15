@@ -19,6 +19,7 @@
   padding: 0;
   font-family: 'Space Mono', monospace;
   scroll-behavior: smooth;
+
 }
 
 body {
@@ -164,9 +165,6 @@ body {
   margin-left: 20px;
 }
 
-#bio {
-  line-height: 25px;
-}
 
 .profile-stats-wrapper {
   display: flex;
@@ -174,7 +172,7 @@ body {
   align-items: center;
   background-color: var(--lm-bg-content);
   border-radius: var(--border-radius);
-  text-align: center;
+
 }
 
 .profile-stat {
@@ -182,6 +180,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 85px;
+
 }
 
 .stat-title {
@@ -249,7 +248,7 @@ body {
 
   .container {
     max-width: 700px;
-    margin: 40px;
+    margin: 30px;
   }
 
   .header {
@@ -270,7 +269,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.3fr .8fr 1.2fr;
-    gap: 0px 0px;
+    gap: 20px 20px;
     grid-auto-flow: row;
     grid-template-areas:
       "blank blank blank"
@@ -295,11 +294,10 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     min-width: 100%;
+    height: 60px;
+    font-size: 10px;
   }
 
-  .profile-info-wrapper {
-    height: 60px;
-  }
 
   #no-results {
     left: 500px;
@@ -309,6 +307,14 @@ body {
     margin-top: 30%;
   }
 
+  .profile-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 65px;
+    padding-bottom: 20px;
+
+  }
   .searchbar-container {
     height: 70px;
   }
@@ -445,6 +451,14 @@ body {
     margin-left: 90px;
   }
 
+  .flame{
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .flame #flame{
+    width: 25px;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -613,6 +627,14 @@ body {
   .mobileBar{
     display: none;
   }
+  .flame{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .flame #flame{
+    width: 35px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -769,6 +791,14 @@ body {
     box-shadow: var(--lm-shadow-inactive);
     /* box-shadow: 0 0 10px 0 rgba(173, 169, 169, 0.5); */
     display: none;
+  }
+  .flame{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .flame #flame{
+    width: 35px;
   }
 }
 
@@ -1153,8 +1183,8 @@ body {
 }
 
 #numbersCorrect {
-  color: var(--lm-text-correct);
-  font-size: 15px;
+  color: var(--lm-text);
+  font-size: inherit;
 }
 
 /* Toast/snackbar */
