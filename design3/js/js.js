@@ -102,7 +102,7 @@ function play() {
     // const path3 = "audio/" + lang + "/" + sn + ".mp3";
     // const audio3 = new Audio(path3);
 
-    audio.playbackRate = 0.90;
+    audio.playbackRate = 0.85;
 
     window.setTimeout(() => {
         audio.play();
